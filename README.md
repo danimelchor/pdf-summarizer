@@ -21,3 +21,7 @@ options:
                         Start page
   -e END, --end END     End page
 ```
+
+## Summary
+
+Parses the text from a pdf and outputs a neatly formatted HTML website with the summary like so:
