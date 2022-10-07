@@ -2,3 +2,4 @@ file.pdf
 summary.html
 .pytest_cache
 venv/
+__pycache__/
