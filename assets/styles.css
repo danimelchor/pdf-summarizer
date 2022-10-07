@@ -1,0 +1,126 @@
+* {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    z-index: 2;
+    gap: 2em;
+}
+
+#header h1 {
+    color: #10a37f;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+#header span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #10a37f;
+    color: white;
+}
+
+#table-of-contents-wrapper {
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: fixed;
+    width: calc((100vw - min(50%, 650px)) / 2);
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3em;
+    background: white;
+    z-index: 1;
+}
+
+#table-of-contents-wrapper a {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0;
+    margin-bottom: 0.1em;
+    line-height: 1.4em;
+    color: #10a37f;
+    text-decoration: none;
+    transition: transform 100ms ease-in-out;
+}
+
+#table-of-contents-wrapper a:hover {
+    font-weight: bold;
+    transform: translateX(10px);
+}
+
+#content {
+    padding: 2em;
+    padding-top: calc(50px + 2em);
+    padding-bottom: 20vh;
+    flex: 1;
+    width: min(50%, 650px);
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2em;
+    padding: 0;
+    margin-bottom: 0.1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 0;
+    margin-bottom: 0.05em;
+    color: #555;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 400;
+    padding: 0;
+    margin-bottom: 0.1em;
+}
+
+ol {
+    margin: 0;
+    padding-left: 1.4em;
+    list-style: decimal inside;
+}
+
+li {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.8em;
+}

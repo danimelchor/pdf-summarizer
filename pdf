@@ -1,0 +1,14 @@
+#/Users/danielmelchor/Documents/CodeProjects/pdf-summary/venv/bin/python3
+
+from src.utils import parse_args
+from src.PDFFile import PDFFile
+from src.Summarizer import Summarizer
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    pdf_file = PDFFile(args.input, args.start, args.end)
+    summarizer = Summarizer(
+        output=args.output,
+    )
+    summarizer.summarize_pdf(pdf_file)
