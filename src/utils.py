@@ -1,22 +1,23 @@
 import argparse
 import os
+from pydoc import describe
 import re
 from nltk import sent_tokenize
 
 def parse_args():
     parser = argparse.ArgumentParser()
 
-    # Start page (inclusive)
-    parser.add_argument('-s', "--start", type=int, default=1)
-
-    # End page (inclusive)
-    parser.add_argument('-e', "--end", type=int, default=1)
-
     # Input pdf file
-    parser.add_argument('-i', "--input", type=str, required=True)
+    parser.add_argument('-i', "--input", type=str, required=True, help="Input pdf file")
 
     # Output file
-    parser.add_argument('-o', "--output", type=str, default="summary.html")
+    parser.add_argument('-o', "--output", type=str, default="summary.html", help="Output file")
+
+    # Start page (inclusive)
+    parser.add_argument('-s', "--start", type=int, default=1, help="Start page")
+
+    # End page (inclusive)
+    parser.add_argument('-e', "--end", type=int, default=1, help="End page")
 
     return parser.parse_args()
 
